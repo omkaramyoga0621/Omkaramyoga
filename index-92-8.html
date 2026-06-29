@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omkaram Yoga — Varanasi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Playfair+Display:wght@400;700&family=Italiana&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --saffron:#F59E0B;
+  --saffron-light:#FFF8E1;
+  --saffron-pale:#FFFBF0;
+  --yellow:#FCD34D;
+  --yellow-light:#FFFDE7;
+  --purple:#7C3AED;
+  --purple-soft:#9B6FF0;
+  --purple-light:#EDE9FE;
+  --purple-pale:#F5F3FF;
+  --purple-mid:#C4B5FD;
+  --teal:#0D9488;
+  --teal-light:#CCFBF1;
+  --teal-pale:#F0FDFA;
+  --teal-mid:#5EEAD4;
+  --cream:#FFF5F7;
+  --text-dark:#1C1917;
+  --text-mid:#57534E;
+  --text-soft:#A8A29E;
+  --white:#FFFFFF;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);line-height:1.7;overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,247,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.07);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:80px;}
+
+/* LOGO */
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:0.7rem;}
+.logo-mark{width:72px;height:auto;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;}
+.logo-svg{width:48px;height:48px;}
+.logo-text-block{display:flex;flex-direction:column;line-height:1.15;}
+.logo-name{font-family:'Italiana',serif;font-size:1.1rem;font-weight:400;color:var(--purple);letter-spacing:0.06em;}
+.logo-sub{font-size:0.6rem;color:var(--text-soft);letter-spacing:0.12em;text-transform:uppercase;font-weight:400;}
+
+.nav-links{display:flex;gap:1.6rem;list-style:none;}
+.nav-links a{text-decoration:none;font-size:0.84rem;color:var(--text-mid);font-weight:400;letter-spacing:0.02em;transition:color 0.2s;}
+.nav-links a:hover{color:var(--saffron);}
+.nav-links a.active{color:var(--purple);font-weight:500;}
+.nav-wa{background:#25D366;color:white;text-decoration:none;font-size:0.79rem;font-weight:500;padding:0.48rem 1rem;border-radius:100px;display:flex;align-items:center;gap:0.4rem;transition:opacity 0.2s;}
+.nav-wa:hover{opacity:0.88;}
+
+/* OFFER BANNER */
+.offer-banner{background:linear-gradient(90deg,#FCE7F3,#EDE9FE,#CCFBF1);border-bottom:2px solid #A78BFA;text-align:center;padding:0.6rem 1rem;font-size:0.8rem;color:#5B21B6;margin-top:80px;}
+.offer-pill{background:#F59E0B;color:white;border-radius:100px;padding:0.14rem 0.7rem;font-weight:700;font-size:0.68rem;margin-right:0.5rem;display:inline-block;letter-spacing:0.05em;text-transform:uppercase;}
+.offer-banner a{color:#9D174D;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(157,23,77,0.3);margin-left:0.4rem;}
+.offer-banner a:hover{border-color:#9D174D;}
+
+/* PAGE SYSTEM */
+.page{display:none;}
+.page.active{display:block;}
+
+/* HERO */
+.hero{padding:4.5rem 4rem 0;max-width:760px;margin:0 auto;position:relative;text-align:center;}
+.hero-content{position:relative;z-index:1;max-width:640px;padding-bottom:3rem;margin:0 auto;}
+.hero-eyebrow{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);font-weight:500;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';display:inline-block;width:20px;height:1px;background:var(--teal);}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,5rem);font-weight:300;line-height:1.05;color:var(--text-dark);margin-bottom:0.85rem;}
+.hero-title em{font-style:italic;color:var(--purple-soft);}
+.hero-title strong{font-weight:600;color:var(--saffron);}
+.hero-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;font-style:italic;color:var(--teal);margin-bottom:1.5rem;}
+.hero-desc{font-size:0.95rem;color:var(--text-mid);max-width:460px;margin:0 auto 2.5rem;font-weight:300;line-height:1.85;text-align:center;}
+
+/* BOOKING CARDS */
+.booking-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;max-width:520px;margin:0 auto 3.5rem;}
+.booking-card{background:var(--white);border-radius:24px;padding:1rem 1.25rem;cursor:pointer;transition:transform 0.22s,box-shadow 0.22s;text-decoration:none;color:inherit;display:flex;align-items:center;gap:0.875rem;border:none;text-align:left;border-bottom:4px solid transparent;}
+.booking-card:hover{transform:translateY(-6px);}
+.card-icon{width:44px;height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:14px;}
+.card-text{flex:1;}
+.booking-card h3{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;margin-bottom:0.1rem;}
+.booking-card p{font-size:0.7rem;color:var(--text-soft);line-height:1.4;font-weight:300;margin-bottom:0;}
+.book-tag{display:inline-block;margin-top:0.5rem;padding:0.18rem 0.65rem;border-radius:100px;font-size:0.6rem;font-weight:500;letter-spacing:0.02em;text-transform:none;background:transparent;border:1px solid;white-space:nowrap;}
+.booking-card.sunrise{background:#FEF9E7;box-shadow:0 5px 0 #F6D860,0 8px 18px rgba(246,216,96,0.35);border-bottom:4px solid #F6D860;}
+.booking-card.sunrise:hover{box-shadow:0 8px 0 #F6D860,0 14px 24px rgba(246,216,96,0.35);}
+.booking-card.sunrise .card-icon{background:#FEF3C7;}
+.booking-card.sunrise h3{color:#92400E;}
+.booking-card.sunrise .book-tag{border-color:var(--saffron);color:#92400E;}
+.booking-card.demo{background:#F5F0FF;box-shadow:0 5px 0 #B197FC,0 8px 18px rgba(124,58,237,0.2);border-bottom:4px solid #B197FC;}
+.booking-card.demo:hover{box-shadow:0 8px 0 #B197FC,0 14px 24px rgba(124,58,237,0.2);}
+.booking-card.demo .card-icon{background:#EDE9FE;}
+.booking-card.demo h3{color:var(--purple);}
+.booking-card.demo .book-tag{border-color:var(--purple-soft);color:var(--purple);}
+.booking-card.walkin{background:#EDFDF8;box-shadow:0 5px 0 #5EEAD4,0 8px 18px rgba(20,184,166,0.2);border-bottom:4px solid #5EEAD4;}
+.booking-card.walkin:hover{box-shadow:0 8px 0 #5EEAD4,0 14px 24px rgba(20,184,166,0.2);}
+.booking-card.walkin .card-icon{background:#CCFBF1;}
+.booking-card.walkin h3{color:#065F46;}
+.booking-card.walkin .book-tag{border-color:var(--teal);color:var(--teal);}
+.booking-card.walk{background:#FFF0F5;box-shadow:0 5px 0 #F9A8D4,0 8px 18px rgba(244,114,182,0.2);border-bottom:4px solid #F9A8D4;}
+.booking-card.walk:hover{box-shadow:0 8px 0 #F9A8D4,0 14px 24px rgba(244,114,182,0.2);}
+.booking-card.walk .card-icon{background:#FFE4EE;}
+.booking-card.walk h3{color:#9D174D;}
+.booking-card.walk .book-tag{border-color:#BE185D;color:#BE185D;}
+.booking-card.medical{background:#F0FDF4;box-shadow:0 5px 0 #86EFAC,0 8px 18px rgba(22,163,74,0.2);border-bottom:4px solid #86EFAC;}
+.booking-card.medical:hover{box-shadow:0 8px 0 #86EFAC,0 14px 24px rgba(22,163,74,0.2);}
+
+/* LOCATION MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:500;display:none;align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:var(--white);border-radius:20px;padding:2.5rem;max-width:400px;width:90%;text-align:center;}
+.modal-box h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--text-dark);margin-bottom:0.5rem;}
+.modal-box p{font-size:0.85rem;color:var(--text-soft);margin-bottom:1.75rem;font-weight:300;}
+.modal-options{display:flex;flex-direction:column;gap:0.875rem;}
+.modal-opt{border-radius:14px;padding:1.1rem 1.25rem;border:1.5px solid;text-decoration:none;display:block;transition:transform 0.18s;}
+.modal-opt:hover{transform:translateY(-2px);}
+.modal-opt.river{border-color:#FDE68A;background:var(--saffron-light);}
+.modal-opt.river h4{color:#92400E;font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;margin-bottom:0.2rem;}
+.modal-opt.river p{font-size:0.75rem;color:#B45309;margin-bottom:0;}
+.modal-opt.studio{border-color:var(--teal-mid);background:var(--teal-pale);}
+.modal-opt.studio h4{color:#065F46;font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;margin-bottom:0.2rem;}
+.modal-opt.studio p{font-size:0.75rem;color:#0F766E;margin-bottom:0;}
+.modal-close{margin-top:1.25rem;font-size:0.78rem;color:var(--text-soft);cursor:pointer;background:none;border:none;font-family:inherit;}
+.modal-close:hover{color:var(--text-dark);}
+
+/* IMAGE PLACEHOLDER */
+.image-strip-wrap{padding:0 4rem 4rem;max-width:1100px;margin:0 auto;}
+.hero-image-strip{background:var(--teal-light);border-radius:20px;height:320px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.75rem;border:1.5px dashed var(--teal-mid);}
+.ph-label{font-size:0.8rem;color:var(--teal);font-weight:500;letter-spacing:0.06em;text-transform:uppercase;}
+.ph-sub{font-size:0.72rem;color:var(--text-soft);font-weight:300;}
+
+/* OM DIVIDER */
+.om-divider{text-align:center;font-size:1.3rem;color:var(--saffron);opacity:0.45;margin:0.5rem 0;letter-spacing:0.7em;}
+
+/* SECTIONS */
+section{padding:4.5rem 4rem;max-width:1100px;margin:0 auto;}
+.section-eyebrow{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:0.75rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,2.9rem);font-weight:300;color:var(--text-dark);line-height:1.18;margin-bottom:1.25rem;}
+.section-title em{font-style:italic;color:var(--purple-soft);}
+
+/* CREDIBILITY */
+.credibility-strip{background:linear-gradient(135deg,#4C3890 0%,#3B2F6E 100%);border-radius:22px;padding:2.5rem 3rem;display:grid;grid-template-columns:auto 1px 1fr auto;gap:2.5rem;align-items:center;color:white;}
+.cred-number{text-align:center;min-width:90px;}
+.cred-num-big{font-family:'Cormorant Garamond',serif;font-size:4.2rem;font-weight:600;line-height:1;color:var(--yellow);}
+.cred-num-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:0.25rem;}
+.cred-divider-line{background:rgba(255,255,255,0.15);align-self:stretch;width:1px;}
+.cred-text h3{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:400;margin-bottom:0.5rem;}
+.cred-text p{font-size:0.85rem;color:rgba(255,255,255,0.7);font-weight:300;line-height:1.7;max-width:420px;}
+.ta-link{display:inline-block;margin-top:0.6rem;font-size:0.75rem;color:var(--yellow);text-decoration:none;border-bottom:1px solid rgba(252,211,77,0.3);}
+.ta-link:hover{border-color:var(--yellow);}
+.cred-badge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:14px;padding:1.1rem 1.5rem;text-align:center;min-width:130px;}
+.cred-badge .stars{color:var(--yellow);font-size:1rem;letter-spacing:0.1em;margin-bottom:0.4rem;}
+.cred-badge strong{display:block;color:white;font-size:0.85rem;margin-bottom:0.25rem;}
+.cred-badge p{font-size:0.72rem;color:rgba(255,255,255,0.5);line-height:1.5;}
+
+/* INSTAGRAM */
+.instagram-strip{background:var(--saffron-light);border-radius:18px;padding:1.75rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;border:1.5px solid #FDE68A;margin-top:1.5rem;}
+.insta-left{display:flex;align-items:center;gap:1.25rem;}
+.insta-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.insta-text h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#92400E;margin-bottom:0.15rem;}
+.insta-text p{font-size:0.8rem;color:var(--text-mid);font-weight:300;}
+.insta-viral{display:inline-block;background:#FEF3C7;color:#92400E;border:1px solid var(--yellow);border-radius:100px;font-size:0.65rem;font-weight:700;padding:0.12rem 0.6rem;letter-spacing:0.06em;text-transform:uppercase;margin-left:0.5rem;vertical-align:middle;}
+.insta-btn{background:linear-gradient(135deg,#F58529,#DD2A7B);color:white;text-decoration:none;padding:0.65rem 1.5rem;border-radius:100px;font-size:0.82rem;font-weight:500;white-space:nowrap;transition:opacity 0.2s;display:flex;align-items:center;gap:0.5rem;flex-shrink:0;}
+.insta-btn:hover{opacity:0.88;}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;}
+.about-card{border-radius:16px;padding:1.75rem;border:1.5px solid;}
+.about-card.teal{background:#E8FDF8;border-color:#A7F3D0;}
+.about-card.yellow{background:var(--yellow-light);border-color:#FDE68A;}
+.about-card h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--text-dark);margin-bottom:0.75rem;}
+.about-card p{font-size:0.88rem;color:var(--text-mid);font-weight:300;line-height:1.8;}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0.875rem;margin-top:1.5rem;}
+.stat-box{background:linear-gradient(135deg,#EDE9FE,#DDD6FE);border:1.5px solid #A78BFA;border-radius:14px;padding:1.25rem;text-align:center;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--purple-soft);line-height:1;}
+.stat-label{font-size:0.68rem;color:var(--text-soft);letter-spacing:0.06em;text-transform:uppercase;margin-top:0.25rem;}
+
+/* STYLES */
+.styles-wrap{background:var(--purple-pale);border-radius:24px;padding:3rem;border:1.5px solid var(--purple-light);}
+.styles-note{background:var(--white);border-radius:12px;padding:1rem 1.25rem;border-left:3px solid var(--purple-mid);font-size:0.85rem;color:var(--text-mid);margin-bottom:2rem;font-style:italic;font-weight:300;}
+.styles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:0.875rem;}
+.style-card{background:var(--white);border-radius:12px;padding:1.1rem 1rem;border-top:3px solid var(--purple-mid);transition:border-color 0.2s,transform 0.2s;}
+.style-card:hover{border-color:var(--purple-soft);transform:translateY(-2px);}
+.style-card h4{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem;}
+.style-card p{font-size:0.75rem;color:var(--text-soft);font-weight:300;line-height:1.5;}
+.therapy-card{background:var(--saffron-pale);border-radius:12px;padding:1.25rem 1.5rem;border-top:3px solid var(--saffron);margin-top:0.875rem;display:flex;align-items:flex-start;gap:1rem;}
+.therapy-card h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:#92400E;margin-bottom:0.25rem;}
+.therapy-card p{font-size:0.78rem;color:#78350F;font-weight:300;line-height:1.6;opacity:0.85;}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:1.25rem;margin-top:2rem;}
+.team-card{background:var(--white);border-radius:18px;padding:1.75rem 1.25rem;text-align:center;border:1.5px solid rgba(0,0,0,0.07);transition:box-shadow 0.2s,transform 0.2s;}
+.team-card:hover{box-shadow:0 8px 28px rgba(0,0,0,0.08);transform:translateY(-3px);}
+.team-avatar{width:68px;height:68px;border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:white;}
+.av-amber{background:#D97706;}
+.av-purple{background:var(--purple-soft);}
+.av-teal{background:var(--teal);}
+.av-saffron{background:#E07B39;}
+.av-green{background:#059669;}
+.team-card h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem;}
+.team-role{font-size:0.67rem;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;margin-bottom:0.6rem;line-height:1.4;}
+.team-card p{font-size:0.77rem;color:var(--text-soft);font-weight:300;line-height:1.6;}
+.ta-badge{display:inline-flex;align-items:center;gap:0.3rem;background:var(--yellow);color:#78350F;font-size:0.67rem;font-weight:700;padding:0.2rem 0.65rem;border-radius:100px;margin-top:0.65rem;}
+
+/* CONTACT */
+.contact-wrap{background:linear-gradient(140deg,#3B2F6E 0%,#4C3890 100%);border-radius:24px;padding:3.5rem;text-align:center;color:white;}
+.contact-wrap .section-eyebrow{color:var(--yellow);}
+.contact-wrap .section-title{color:white;margin-bottom:0.75rem;}
+.contact-wrap>p{color:rgba(255,255,255,0.62);font-size:0.9rem;font-weight:300;margin-bottom:2rem;max-width:460px;margin-left:auto;margin-right:auto;}
+.contact-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;}
+.cta-yellow{background:var(--yellow);color:#78350F;padding:0.85rem 2rem;border-radius:100px;text-decoration:none;font-size:0.88rem;font-weight:600;transition:opacity 0.2s;}
+.cta-yellow:hover{opacity:0.88;}
+.cta-outline{background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.25);padding:0.85rem 2rem;border-radius:100px;text-decoration:none;font-size:0.88rem;font-weight:400;transition:background 0.2s;}
+.cta-outline:hover{background:rgba(255,255,255,0.18);}
+.cta-wa{background:#25D366;color:white;padding:0.85rem 2rem;border-radius:100px;text-decoration:none;font-size:0.88rem;font-weight:500;display:flex;align-items:center;gap:0.5rem;transition:opacity 0.2s;}
+.cta-wa:hover{opacity:0.88;}
+.contact-info{font-size:0.78rem;color:rgba(255,255,255,0.28);line-height:1.9;}
+
+/* ===== VARANASI & YOGA PAGE ===== */
+.vpage{padding:4rem 4rem;max-width:1100px;margin:0 auto;}
+.vpage-hero{background:linear-gradient(135deg,#3B2F6E 0%,#4C3890 60%,#2E4A6E 100%);border-radius:24px;padding:3.5rem;color:white;margin-bottom:3rem;position:relative;overflow:hidden;}
+.vpage-hero-om{position:absolute;right:-1rem;top:-2rem;font-size:18rem;color:rgba(255,255,255,0.04);font-family:'Playfair Display',serif;font-weight:700;pointer-events:none;}
+.vpage-hero .section-eyebrow{color:var(--yellow);}
+.vpage-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:white;line-height:1.15;margin-bottom:1rem;}
+.vpage-hero h1 em{font-style:italic;color:var(--yellow);}
+.vpage-hero p{font-size:0.95rem;color:rgba(255,255,255,0.7);font-weight:300;line-height:1.8;max-width:600px;}
+
+.vcard{background:var(--white);border-radius:20px;padding:2rem 2.5rem;margin-bottom:1.5rem;border:1.5px solid rgba(0,0,0,0.07);}
+.vcard-header{display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.25rem;}
+.vcard-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.5rem;}
+.vcard-icon.saffron{background:var(--saffron-light);}
+.vcard-icon.purple{background:var(--purple-pale);}
+.vcard-icon.teal{background:var(--teal-pale);}
+.vcard h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--text-dark);margin-bottom:0.25rem;}
+.vcard .subtitle{font-size:0.78rem;color:var(--text-soft);font-weight:300;}
+.vcard-body p{font-size:0.9rem;color:var(--text-mid);font-weight:300;line-height:1.85;margin-bottom:1rem;}
+.vcard-body p:last-child{margin-bottom:0;}
+
+.fact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1.5rem;}
+.fact-card{border-radius:14px;padding:1.25rem;border:1.5px solid;}
+.fact-card.f-saffron{background:var(--saffron-light);border-color:#FDE68A;}
+.fact-card.f-purple{background:var(--purple-pale);border-color:var(--purple-light);}
+.fact-card.f-teal{background:var(--teal-pale);border-color:var(--teal-light);}
+.fact-card h4{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;margin-bottom:0.4rem;}
+.fact-card.f-saffron h4{color:#92400E;}
+.fact-card.f-purple h4{color:var(--purple);}
+.fact-card.f-teal h4{color:#065F46;}
+.fact-card p{font-size:0.78rem;color:var(--text-mid);font-weight:300;line-height:1.6;}
+
+.chakra-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.25rem;}
+.chakra-item{background:var(--purple-pale);border-radius:12px;padding:1rem 1.25rem;border-left:3px solid var(--purple-mid);}
+.chakra-item h5{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--purple);margin-bottom:0.2rem;}
+.chakra-item p{font-size:0.78rem;color:var(--text-mid);font-weight:300;line-height:1.55;}
+
+.sutra-list{margin-top:1.25rem;display:flex;flex-direction:column;gap:0.75rem;}
+.sutra-item{display:flex;gap:1rem;align-items:flex-start;padding:0.875rem 1rem;background:var(--teal-pale);border-radius:12px;border-left:3px solid var(--teal-mid);}
+.sutra-num{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--teal);min-width:28px;line-height:1.2;}
+.sutra-item h5{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--text-dark);margin-bottom:0.15rem;}
+.sutra-item p{font-size:0.78rem;color:var(--text-mid);font-weight:300;line-height:1.55;}
+
+.visit-box{background:var(--saffron-light);border-radius:14px;padding:1.5rem;border:1.5px solid #FDE68A;margin-top:1.5rem;display:flex;gap:1.25rem;align-items:flex-start;}
+.visit-box h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:#92400E;margin-bottom:0.3rem;}
+.visit-box p{font-size:0.82rem;color:#78350F;font-weight:300;line-height:1.6;opacity:0.85;}
+
+/* FOOTER */
+footer{text-align:center;padding:2rem;font-size:0.78rem;color:var(--text-soft);border-top:1px solid rgba(0,0,0,0.06);}
+.footer-om{font-size:1.3rem;color:var(--saffron);margin-bottom:0.4rem;opacity:0.5;font-family:'Playfair Display',serif;font-weight:700;}
+
+/* FLOATING WA */
+.float-wa{position:fixed;bottom:1.75rem;right:1.75rem;z-index:200;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.45);transition:transform 0.2s;}
+.float-wa:hover{transform:scale(1.1);}
+.float-wa svg{width:26px;height:26px;fill:white;}
+
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text-dark);border-radius:2px;transition:all 0.3s;}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(255,245,247,0.98);backdrop-filter:blur(12px);padding:1.5rem 2rem;z-index:99;border-bottom:1px solid rgba(0,0,0,0.08);flex-direction:column;gap:0;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{text-decoration:none;font-size:1rem;color:var(--text-dark);font-weight:400;padding:0.875rem 0;border-bottom:1px solid rgba(0,0,0,0.06);display:block;}
+.mobile-menu a:last-child{border-bottom:none;}
+
+/* MOBILE */
+@media(max-width:768px){
+  /* NAV */
+  nav{padding:0 1.25rem;height:64px;}
+  .nav-links{display:none;}
+  .nav-wa{display:none;}
+  .hamburger{display:flex;}
+  .logo-text-block{display:flex;}
+  .logo-svg{width:40px;height:40px;}
+  .logo-name{font-size:1rem;}
+
+  /* OFFER BANNER */
+  .offer-banner{margin-top:64px;font-size:0.72rem;padding:0.5rem 1rem;line-height:1.5;}
+
+  /* HERO */
+  .hero{padding:2.5rem 1.25rem 0;}
+  .hero-title{font-size:2.2rem;line-height:1.1;}
+  .hero-subtitle{font-size:1rem;}
+  .hero-desc{font-size:0.9rem;}
+  .hero-eyebrow{font-size:0.65rem;}
+
+  /* BOOKING CARDS — 2×2 grid preserved on mobile, 1 col on small */
+  .booking-cards{grid-template-columns:1fr 1fr;gap:0.65rem;max-width:100%;}
+  .booking-card.medical{grid-column:auto;}
+  .booking-card{padding:0.75rem 0.875rem;gap:0.65rem;border-radius:14px;}
+  .card-icon{width:38px;height:38px;border-radius:10px;}
+  .card-icon svg{width:20px;height:20px;}
+  .booking-card h3{font-size:0.88rem;}
+  .booking-card p{font-size:0.65rem;}
+  .book-tag{font-size:0.58rem;padding:0.14rem 0.55rem;}
+
+  /* IMAGE STRIP */
+  .image-strip-wrap{padding:0 1.25rem 3rem;}
+  .hero-image-strip{height:220px;border-radius:14px;}
+
+  /* SECTIONS */
+  section{padding:2.5rem 1.25rem;}
+  .section-title{font-size:1.85rem;}
+
+  /* CREDIBILITY */
+  .credibility-strip{grid-template-columns:1fr;gap:1.25rem;padding:1.75rem 1.5rem;border-radius:18px;text-align:center;}
+  .cred-divider-line{display:none;}
+  .cred-number{min-width:auto;}
+  .cred-num-big{font-size:3rem;}
+  .cred-text h3{font-size:1.25rem;}
+  .cred-text p{font-size:0.82rem;}
+  .cred-badge{min-width:auto;padding:0.875rem 1.25rem;}
+
+  /* INSTAGRAM */
+  .instagram-strip{flex-direction:column;padding:1.25rem 1.5rem;gap:1rem;border-radius:16px;}
+  .insta-left{flex-direction:column;align-items:center;text-align:center;gap:0.875rem;}
+  .insta-icon{width:42px;height:42px;}
+  .insta-text h4{font-size:1rem;}
+  .insta-text p{font-size:0.78rem;}
+  .insta-btn{justify-content:center;padding:0.6rem 1.25rem;font-size:0.8rem;}
+
+  /* ABOUT */
+  .about-grid{grid-template-columns:1fr;}
+  .about-card{padding:1.5rem;}
+  .about-card h4{font-size:1.1rem;}
+  .stat-row{grid-template-columns:1fr 1fr;gap:0.65rem;}
+  .stat-num{font-size:1.8rem;}
+  .stat-label{font-size:0.62rem;}
+
+  /* STYLES */
+  .styles-wrap{padding:1.75rem 1.25rem;border-radius:18px;}
+  .styles-grid{grid-template-columns:1fr 1fr;}
+  .style-card{padding:0.875rem;}
+  .style-card h4{font-size:0.9rem;}
+  .style-card p{font-size:0.7rem;}
+
+  /* TEAM */
+  .team-grid{grid-template-columns:1fr 1fr;}
+  .team-card{padding:1.25rem 1rem;}
+  .team-avatar{width:56px;height:56px;font-size:1.2rem;}
+
+  /* CONTACT */
+  .contact-wrap{padding:2rem 1.25rem;border-radius:18px;}
+  .contact-wrap .section-title{font-size:1.75rem;}
+  .contact-btns{gap:0.75rem;}
+  .cta-yellow,.cta-outline,.cta-wa{padding:0.75rem 1.5rem;font-size:0.82rem;}
+
+  /* VARANASI PAGE */
+  .vpage{padding:2.5rem 1.25rem;}
+  .vpage-hero{padding:2rem 1.5rem;border-radius:18px;}
+  .vpage-hero h1{font-size:1.7rem;}
+  .vpage-hero p{font-size:0.88rem;}
+  .vcard{padding:1.5rem 1.25rem;border-radius:16px;}
+  .fact-grid{grid-template-columns:1fr;}
+  .chakra-grid{grid-template-columns:1fr;}
+  .sutra-list{gap:0.6rem;}
+
+  /* MODALS */
+  .bmodal{padding:1.5rem;}
+  .bmodal h3{font-size:1.35rem;}
+  .modal-box{padding:1.75rem 1.25rem;}
+
+  /* FLOAT WA */
+  .float-wa{width:48px;height:48px;bottom:1.25rem;right:1.25rem;}
+  .float-wa svg{width:22px;height:22px;}
+}
+
+/* Extra small screens */
+@media(max-width:400px){
+  .booking-cards{grid-template-columns:1fr;}
+  .styles-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr;}
+  .hero-title{font-size:1.9rem;}
+  .section-title{font-size:1.65rem;}
+  .stat-row{grid-template-columns:1fr 1fr;}
+  nav{height:60px;}
+  .offer-banner{margin-top:60px;}
+}
+@media(max-width:768px){
+  .nada-image-wrap{padding:0 1.25rem!important;}
+  .nada-image-wrap .nada-caption{bottom:1.25rem!important;left:1.25rem!important;right:1.25rem!important;}
+  .nada-image-wrap .nada-caption p:first-child{font-size:0.92rem!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo" onclick="showPage('home');return false;">
+    <div class="logo-mark">
+      <img src="images/img1.png" alt="Omkaram Yoga Logo" style="width:72px;height:auto;display:block;">
+    </div>
+    <div class="logo-text-block">
+      <span class="logo-name">Omkaram</span>
+      <span class="logo-sub">Being oneself</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home');return false;" id="nav-home" class="active">Home</a></li>
+    <li><a href="#" onclick="scrollToSection('about');return false;">About</a></li>
+    <li><a href="#" onclick="scrollToSection('styles');return false;">Classes</a></li>
+    <li><a href="#" onclick="scrollToSection('team');return false;">Teachers</a></li>
+    <li><a href="#" onclick="showPage('varanasi');return false;" id="nav-varanasi">Varanasi & Yoga</a></li>
+    <li><a href="#" onclick="showPage('styles');return false;" id="nav-styles">What We Teach</a></li>
+    <li><a href="#" onclick="showPage('photos');return false;" id="nav-photos">Photos</a></li>
+    <li><a href="#" onclick="showPage('doctor');return false;" id="nav-doctor" style="color:#16A34A;font-weight:500;">Doctor Consultation</a></li>
+    <li><a href="#" onclick="scrollToSection('contact');return false;">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/917022321855" class="nav-wa" target="_blank">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('home');closeMenu();return false;">Home</a>
+  <a href="#" onclick="scrollToSection('about');closeMenu();return false;">About</a>
+  <a href="#" onclick="scrollToSection('styles');closeMenu();return false;">Classes</a>
+  <a href="#" onclick="scrollToSection('team');closeMenu();return false;">Teachers</a>
+  <a href="#" onclick="showPage('varanasi');closeMenu();return false;">Varanasi & Yoga</a>
+  <a href="#" onclick="showPage('styles');closeMenu();return false;">What We Teach</a>
+  <a href="#" onclick="showPage('doctor');closeMenu();return false;" style="color:#16A34A;font-weight:500;">Doctor Consultation</a>
+  <a href="#" onclick="scrollToSection('contact');closeMenu();return false;">Contact</a>
+  <a href="https://wa.me/917022321855" target="_blank" style="color:#25D366;font-weight:500;">💬 WhatsApp us</a>
+</div>
+
+<!-- OFFER BANNER -->
+<div class="offer-banner">
+  <span class="offer-pill">Free Yoga</span>
+  Sunrise Yoga on the Ghats · June 21 – July 21 · Celebrating International Day of Yoga · Absolutely no cost, part of our offering as a gratitude ·
+  <a href="#" onclick="closeAllModals();document.getElementById('modal-sunrise').classList.add('open');return false;">Reserve your spot →</a>
+</div>
+
+<!-- BOOKING MODALS -->
+<style>
+.bmodal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:500;display:none;align-items:center;justify-content:center;padding:1rem;}
+.bmodal-overlay.open{display:flex;}
+.bmodal{background:white;border-radius:20px;padding:2rem;max-width:480px;width:100%;max-height:90vh;overflow-y:auto;}
+.bmodal h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--text-dark);margin-bottom:0.35rem;}
+.bmodal .bmodal-sub{font-size:0.8rem;color:var(--text-soft);margin-bottom:1.25rem;line-height:1.6;}
+.bmodal-info{background:var(--saffron-light);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.25rem;border-left:3px solid var(--saffron);}
+.bmodal-info p{font-size:0.82rem;color:#92400E;line-height:1.65;}
+.bmodal-info strong{display:block;margin-bottom:0.25rem;font-size:0.85rem;}
+.gcal-btn{display:block;background:var(--purple-light);color:var(--purple);text-align:center;padding:0.85rem 1.5rem;border-radius:12px;text-decoration:none;font-size:0.88rem;font-weight:600;margin-bottom:0.75rem;transition:all 0.2s;border:1.5px solid var(--purple-mid);}
+.gcal-btn:hover{background:var(--purple);color:white;}
+.gcal-btn.teal{background:var(--teal-pale);color:var(--teal);border-color:var(--teal-mid);}
+.gcal-btn.teal:hover{background:var(--teal);color:white;}
+.gcal-btn.wa{background:#E7FBF0;color:#128C4A;border-color:#86EFAC;}
+.gcal-btn.wa:hover{background:#25D366;color:white;}
+.bmodal-close{width:100%;background:none;border:1px solid rgba(0,0,0,0.12);border-radius:10px;padding:0.65rem;font-size:0.82rem;color:var(--text-soft);cursor:pointer;margin-top:0.5rem;}
+
+
+</style>
+
+<!-- MODAL STYLES -->
+<style>
+.bmodal-info-tag{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.75rem;font-weight:500;padding:0.3rem 0.875rem;border-radius:100px;margin-bottom:0.5rem;}
+.know-row{display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 0;border-bottom:1px solid rgba(0,0,0,0.06);}
+.know-row:last-child{border-bottom:none;}
+.know-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+.know-label{font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-soft);margin-bottom:0.1rem;}
+.know-val{font-size:0.85rem;color:var(--text-dark);font-weight:300;line-height:1.5;}
+.bmodal-divider{border:none;border-top:1px solid rgba(0,0,0,0.08);margin:1.25rem 0;}
+.slot-field{display:flex;flex-direction:column;gap:0.3rem;margin-bottom:1rem;}
+.slot-field label{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-soft);}
+.slot-field input,.slot-field textarea{border:none;border-bottom:1.5px solid rgba(0,0,0,0.15);padding:0.4rem 0;font-size:0.9rem;font-family:'Cormorant Garamond',serif;color:var(--text-dark);outline:none;background:transparent;width:100%;}
+.slot-field input:focus,.slot-field textarea:focus{border-bottom-color:var(--purple);}
+.slot-field textarea{resize:none;min-height:50px;}
+.slot-field input::placeholder,.slot-field textarea::placeholder{color:var(--text-soft);font-style:italic;}
+.confirm-note{background:var(--purple-pale);border-radius:10px;padding:0.875rem 1rem;font-size:0.78rem;color:var(--purple);line-height:1.6;margin-bottom:1rem;border-left:3px solid var(--purple-mid);}
+.slot-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+@media(max-width:480px){.slot-row{grid-template-columns:1fr;}.bmodal{padding:1.25rem;}.know-val{font-size:0.82rem;}}
+</style>
+
+<!-- SUNRISE MODAL -->
+<div class="bmodal-overlay" id="modal-sunrise">
+  <div class="bmodal">
+    <h3>🌅 Sunrise Yoga</h3>
+    <p class="bmodal-sub">On the ghats of the Ganga · 5:00 AM – 8:00 AM</p>
+
+    <div style="background:var(--saffron-light);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
+      <div class="know-row">
+        <span class="know-icon">🎨</span>
+        <div><div class="know-label">Style</div><div class="know-val">Decided together in a quick chat before class — or go with your preferred style. Either way, perfect.</div></div>
+      </div>
+      <div class="know-row">
+        <span class="know-icon">📍</span>
+        <div><div class="know-label">Location</div><div class="know-val">Exact ghat details sent to you right after booking. Steps from the Ganga.</div></div>
+      </div>
+      <div class="know-row">
+        <span class="know-icon">🎒</span>
+        <div><div class="know-label">What to bring</div><div class="know-val">Yoga mat · hydration bottle · a smile. No mat? Just WhatsApp us — we'll have one ready.</div></div>
+      </div>
+    </div>
+
+    <hr class="bmodal-divider">
+    <div class="confirm-note">✅ Click below to pick your slot — a confirmation with the exact ghat location and time will be sent to you right after booking. Questions? Just WhatsApp us.</div>
+    <a href="https://calendar.app.google/uMRyD6pPM7nWhDWB8" class="gcal-btn" target="_blank" onclick="closeAllModals()" style="text-align:center;font-size:0.95rem;padding:1rem;">
+      📅 See available slots & Book
+    </a>
+    <a href="https://wa.me/917022321855?text=I%20have%20a%20question%20about%20Sunrise%20Yoga" class="gcal-btn wa" target="_blank">💬 Prefer to chat first? WhatsApp us</a>
+    <button class="bmodal-close" onclick="closeAllModals()">Cancel</button>
+  </div>
+</div>
+
+<!-- DEMO MODAL -->
+<div class="bmodal-overlay" id="modal-demo">
+  <div class="bmodal">
+    <h3>🧘 Free Demo Class</h3>
+    <p class="bmodal-sub">Online · Meet your teacher · Find your style</p>
+
+    <div style="background:var(--purple-pale);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
+      <div class="know-row">
+        <span class="know-icon">🎨</span>
+        <div><div class="know-label">Style</div><div class="know-val">We'll find the right fit together in this very session — no pressure, no expectations.</div></div>
+      </div>
+      <div class="know-row">
+        <span class="know-icon">💻</span>
+        <div><div class="know-label">Where</div><div class="know-val">Online — video call link shared over WhatsApp after confirmation. Morning: 5–10 AM · Evening: 4–8 PM.</div></div>
+      </div>
+      <div class="know-row">
+        <span class="know-icon">🎒</span>
+        <div><div class="know-label">What to bring</div><div class="know-val">Yourself, a quiet corner and a glass of water. That's honestly it.</div></div>
+      </div>
+    </div>
+
+    <div class="confirm-note">💬 WhatsApp us to check available slots and confirm your demo class. We'll send you the video call link and all details right away.</div>
+    <a href="https://wa.me/917022321855?text=Hi%20Omkaram%20Yoga!%20I%27d%20like%20to%20book%20a%20Free%20Demo%20Class.%20%F0%9F%A7%98%0A%0AI%27ll%20wear%20comfortable%20clothes%2C%20bring%20water%2C%20and%20show%20up%20on%20time.%20Please%20let%20me%20know%20available%20slots!" class="gcal-btn wa" target="_blank" onclick="closeAllModals()">💬 WhatsApp us to Book</a>
+    <button class="bmodal-close" onclick="closeAllModals()">Cancel</button>
+  </div>
+</div>
+
+<!-- WALKIN MODAL -->
+<div class="bmodal-overlay" id="modal-walkin">
+  <div class="bmodal">
+    <h3>🏛️ Walk In to the Studio</h3>
+    <p class="bmodal-sub">Omkaram Studio · Assi Ghat, Varanasi · Any time you wish</p>
+
+    <div style="background:var(--teal-pale);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
+      <div class="know-row">
+        <span class="know-icon">🎨</span>
+        <div><div class="know-label">Style</div><div class="know-val">Whatever you feel like — our teachers will guide you based on a quick conversation when you arrive.</div></div>
+      </div>
+      <div class="know-row">
+        <span class="know-icon">📍</span>
+        <div><div class="know-label">Location</div><div class="know-val">Omkaram Studio, Assi Ghat, Varanasi. Walk in at any time — no appointment needed, ever.</div></div>
+      </div>
+      <div class="know-row">
+        <span class="know-icon">🎒</span>
+        <div><div class="know-label">What to bring</div><div class="know-val">Yoga mat · hydration bottle · a smile. No mat? Just ask us — we'll sort one out.</div></div>
+      </div>
+    </div>
+
+    <div class="confirm-note">💬 Just WhatsApp us when you're on your way — we'll have everything ready for you.</div>
+    <a href="https://maps.google.com/?q=Assi+Ghat+Varanasi" class="gcal-btn teal" target="_blank" onclick="closeAllModals()">📍 Get directions to Assi Ghat</a>
+    <a href="https://wa.me/917022321855?text=Hi%20Omkaram%20Yoga!%20I%27m%20planning%20to%20walk%20in%20to%20the%20studio%20at%20Assi%20Ghat.%20%F0%9F%8F%9B%EF%B8%8F%0A%0AI%27ll%20bring%20a%20mat%20and%20water.%20Please%20let%20me%20know%20if%20there%27s%20anything%20I%20should%20know%20before%20I%20come!" class="gcal-btn wa" target="_blank" onclick="closeAllModals()">💬 WhatsApp us when you're coming</a>
+    <button class="bmodal-close" onclick="closeAllModals()">Cancel</button>
+  </div>
+</div>
+
+<!-- ===== HOME PAGE ===== -->
+<div id="page-home" class="page active">
+
+  <div class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to Omkaram · Varanasi</p>
+      <h1 class="hero-title">Yoga on the<br><em>ghats</em> of<br><strong>Varanasi</strong></h1>
+      <p class="hero-subtitle">Being oneself</p>
+      <p class="hero-desc">Begin your morning on the ancient ghats of Kashi — breathe with the river, move as the Sun rises over the Ganga. Whether you are here for a day or a lifetime, there is a practice waiting for you.</p>
+
+      <!-- PREP TIPS STRIP -->
+      <div style="background:linear-gradient(135deg,#EDE9FE,#DDD6FE);border-radius:16px;padding:1.25rem 1.5rem;margin-bottom:1.25rem;max-width:580px;margin-left:auto;margin-right:auto;">
+        <p style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--purple);font-weight:600;margin-bottom:0.875rem;">3 easy steps · your best session awaits</p>
+        <div style="display:flex;gap:1.25rem;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.78rem;color:var(--text-mid);font-weight:300;">
+            <span style="font-size:1.1rem;">🧘</span> Wear something comfy
+          </div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.78rem;color:var(--text-mid);font-weight:300;">
+            <span style="font-size:1.1rem;">🫙</span> Bring mat and water
+          </div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.78rem;color:var(--text-mid);font-weight:300;">
+            <span style="font-size:1.1rem;">⏰</span> Show up on time
+          </div>
+        </div>
+        <p style="font-size:0.72rem;color:var(--text-mid);margin-top:0.75rem;font-weight:400;">No mat? No problem — WhatsApp us and we'll sort one out for you.</p>
+      </div>
+
+      <div class="booking-cards">
+        <a href="#" onclick="closeAllModals();document.getElementById('modal-sunrise').classList.add('open');return false;" class="booking-card sunrise">
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+              <path d="M3 21h18" stroke-width="1.4"/>
+            </svg>
+          </div>
+          <div class="card-text">
+            <h3>Ghat Sunrise Yoga</h3>
+            <p>On the ghats as dawn breaks over the Ganga <span style="font-size:0.65rem;opacity:0.7;">(yoga on river banks)</span></p>
+            <span class="book-tag">Know more & Book</span>
+          </div>
+        </a>
+        <a href="#" onclick="closeAllModals();document.getElementById('modal-demo').classList.add('open');return false;" class="booking-card demo" target="_blank">
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9B6FF0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="card-text">
+            <h3>Free Online Demo</h3>
+            <p>Meet your teacher online, find your style <span style="font-size:0.65rem;opacity:0.7;">(to enrol into online classes)</span></p>
+            <span class="book-tag">Know more & Book</span>
+          </div>
+        </a>
+        <a href="#" onclick="closeAllModals();document.getElementById('modal-walkin').classList.add('open');return false;" class="booking-card walkin" target="_blank">
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="card-text">
+            <h3>Studio Walk-in</h3>
+            <p>Omkaram Studio, Assi Ghat — all welcome <span style="font-size:0.65rem;opacity:0.7;">(meet teachers & enrol to studio classes)</span></p>
+            <span class="book-tag">Know more & Book</span>
+          </div>
+        </a>
+        <a href="https://wa.me/917022321855?text=Hi%20Omkaram%20Yoga!%20I%27d%20like%20to%20know%20more%20about%20the%20Heritage%20Yoga%20Walk.%20%F0%9F%9A%B6" class="booking-card walk" target="_blank">
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#BE185D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="5" r="2"/>
+              <path d="M12 7v5l-3 5"/>
+              <path d="M12 12l3 5"/>
+              <path d="M9 12H6"/>
+              <path d="M15 12h3"/>
+            </svg>
+          </div>
+          <div class="card-text">
+            <h3>Yoga Heritage Walk</h3>
+            <p>Patanjali Akhada, Nath shrines, Kabir's ashram <span style="font-size:0.65rem;opacity:0.7;">(explore Yogic heritage of the city)</span></p>
+            <span class="book-tag">Know more & Book</span>
+          </div>
+        </a>
+        <a href="#" onclick="showPage('doctor');return false;" class="booking-card medical" style="grid-column:1/-1;">
+          <div style="width:36px;height:36px;background:#DCFCE7;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div style="flex:1;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:#14532D;margin-bottom:0.1rem;">Disease Treatment through Yoga</div>
+            <div style="font-size:0.7rem;color:var(--text-soft);font-weight:300;line-height:1.4;">Get a personalised Yogic program from a doctor at AIIMS, India's leading medical institute <span style="font-size:0.65rem;opacity:0.7;">(for yogic medical treatment)</span></div>
+          </div>
+          <span style="font-size:0.65rem;border:1px solid #86EFAC;color:#16A34A;border-radius:100px;padding:0.2rem 0.65rem;white-space:nowrap;flex-shrink:0;">Know more</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-strip-wrap">
+    <div style="border-radius:20px;overflow:hidden;">
+      <img src="images/img2.jpg" alt="Sunrise yoga on the ghats of Varanasi" style="width:100%;height:auto;display:block;">
+    </div>
+  </div>
+
+  <div class="om-divider">· ॐ ·</div>
+
+  <section id="about" style="padding-bottom:0;scroll-margin-top:80px;">
+    <p class="section-eyebrow">About Omkaram Yoga</p>
+    <h2 class="section-title">Rooted in Kashi,<br>alive in every <em>breath</em></h2>
+  </section>
+
+  <section id="credibility" style="padding-top:1rem;">
+    <div class="credibility-strip">
+      <div class="cred-number">
+        <div class="cred-num-big">5.0</div>
+        <div class="cred-num-label">TripAdvisor</div>
+      </div>
+      <div class="cred-divider-line"></div>
+      <div class="cred-text">
+        <h3>Guided by Varanasi's most trusted voice</h3>
+        <p>Manjeet Sahani has spent 20 years walking the ghats of Kashi — as a yoga teacher, heritage guide, and keeper of this city's living wisdom. His Heritage Walk holds a perfect 5-star rating with 288 reviews, ranked #1 in Varanasi.</p>
+        <a href="https://www.tripadvisor.in/Attraction_Review-g297685-d8434580-Reviews-The_Heritage_Walk_By_Manjeet-Varanasi_Varanasi_District_Uttar_Pradesh.html" class="ta-link" target="_blank">Read 288 reviews on TripAdvisor →</a>
+      </div>
+      <div class="cred-badge">
+        <div class="stars">★★★★★</div>
+        <strong>#1 in Varanasi</strong>
+        <p>288 reviews<br>Heritage Walk<br>& Yoga Guide</p>
+      </div>
+    </div>
+    <div class="instagram-strip">
+      <div class="insta-left">
+        <div class="insta-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+        <div class="insta-text">
+          <h4>Follow Manjeet on Instagram <span class="insta-viral">Viral</span></h4>
+          <p>@varanasi_heritage_tour · Follow the most trusted voice of Varanasi — stories, ghats, culture, and the soul of Kashi</p>
+        </div>
+      </div>
+      <a href="https://www.instagram.com/varanasi_heritage_tour/" class="insta-btn" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Follow on Instagram
+      </a>
+    </div>
+
+    <div class="about-grid" style="margin-top:2rem;">
+      <div class="about-card teal">
+        <h4>For visitors & travellers</h4>
+        <p>Begin your morning with yoga on the ancient ghats in the land of Adiyogi and Patanjali — one session or many. No commitment, no experience needed. Just show up, breathe, and let the Ganga do the rest. Open sky, sacred river, first light.</p>
+      </div>
+      <div class="about-card yellow">
+        <h4>For regular students</h4>
+        <p>Structured classes for those who want to go deeper — beginners through to advanced practitioners. In-person at our studio at Assi Ghat, and online from anywhere in the world. Instruction in English, Hindi, and Kannada.</p>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num">8+</div><div class="stat-label">Yoga traditions</div></div>
+      <div class="stat-box"><div class="stat-num">20+</div><div class="stat-label">Years in Varanasi</div></div>
+      <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">Languages</div></div>
+      <div class="stat-box"><div class="stat-num">All</div><div class="stat-label">Levels welcome</div></div>
+    </div>
+  </section>
+
+  
+
+
+  <section id="team">
+    <p class="section-eyebrow">Our teachers</p>
+    <h2 class="section-title">Guided by those who<br>have <em>walked the path</em></h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar av-amber" style="overflow:hidden;padding:0;"><img src="images/img4.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <h4>Manjeet Sahani</h4>
+        <div class="team-role">Founder · Senior Yoga Teacher & Varanasi Guide</div>
+        <p>Born and raised in the devotion-filled atmosphere of Varanasi, Manjeet has spent 20 years on the ghats as a yoga teacher and heritage guide. His vision is to teach yoga from a spirit of genuine service — meeting each student where they are, with the warmth and wisdom of Kashi.</p>
+        <span class="ta-badge">★★★★★ #1 in Varanasi</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar av-purple" style="overflow:hidden;padding:0;"><img src="images/img5.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <h4>Bharadwaj Aldur</h4>
+        <div class="team-role">Lead Yoga Teacher</div>
+        <p>MSc. in Yoga, Svyasa University. Certified Sivananda Yoga teacher, Uttarakashi. Trained in Viniyoga at Krishnamacharya Yoga Mandiram. Versed in classical texts and consciousness studies. A former AI Engineer at WalmartLabs, he also holds an MSc. in AI from the University of Southampton.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar av-teal" style="overflow:hidden;padding:0;"><img src="images/img6.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <h4>Dr. Sai Anirudh</h4>
+        <div class="team-role">Yoga Therapy & Naturopathy Consultant</div>
+        <p>Currently a doctor at AIIMS. Expert in Yogic Sciences and Naturopathy. Has published research papers on yoga and healing, and is actively involved in ongoing research in this field. Therapeutic and healing consultant bridging modern medicine with yogic wisdom.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar av-saffron" style="overflow:hidden;padding:0;"><img src="images/img7.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <h4>Vijay Kapse</h4>
+        <div class="team-role">Yoga Teacher</div>
+        <p>IIT Madras graduate and certified yoga instructor. Specialises in advanced meditation sessions, bringing a precise, analytical understanding of body and mind — making complex concepts clear for every student.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="nada-image-wrap" style="padding:0 4rem 0;max-width:1100px;margin:0 auto 3rem;">
+    <div style="position:relative;border-radius:24px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.14);">
+      <img src="images/img8.png" alt="Nada Yoga singing bowls at Omkaram Studio" style="width:100%;height:auto;display:block;" loading="eager">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(28,25,23,0.55) 0%,rgba(28,25,23,0) 50%);pointer-events:none;"></div>
+      <div class="nada-caption" style="position:absolute;bottom:2rem;left:2.25rem;right:2.25rem;">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;font-style:italic;color:rgba(255,255,255,0.88);margin:0 0 0.25rem;letter-spacing:0.01em;">Nada Yoga — the path of sacred sound</p>
+        <p style="font-size:0.72rem;color:rgba(255,255,255,0.5);margin:0;letter-spacing:0.1em;text-transform:uppercase;font-weight:400;">Omkaram Studio · Assi Ghat, Varanasi</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <section id="contact">
+    <div class="contact-wrap">
+      <p class="section-eyebrow">Come find us</p>
+      <h2 class="section-title">Be a witness while the <span style="color:#3B82F6;font-style:italic;">River</span><br>merges into the <span style="color:#F97316;font-weight:600;">Sun</span></h2>
+      <p style="color:rgba(255,255,255,0.55);font-size:0.82rem;font-weight:300;margin-bottom:1.25rem;">We speak English, Hindi, and Kannada.</p>
+      <div style="background:rgba(255,255,255,0.08);border-radius:14px;padding:1rem 1.5rem;margin-bottom:1.5rem;max-width:520px;margin-left:auto;margin-right:auto;">
+        <p style="font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;font-weight:600;">3 easy steps · your best session awaits</p>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;">
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.75);display:flex;align-items:center;gap:0.4rem;">🧘 Wear comfy clothes</span>
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.75);display:flex;align-items:center;gap:0.4rem;">🎒 Bring mat and water · <span style="color:rgba(255,255,255,0.55);font-size:0.73rem;">No mat? We'll arrange one — just WhatsApp us</span></span>
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.75);display:flex;align-items:center;gap:0.4rem;">⏰ Show up on time</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.875rem;max-width:520px;margin:0 auto 2rem;">
+        <a href="#" onclick="closeAllModals();document.getElementById('modal-sunrise').classList.add('open');return false;" style="background:rgba(255,255,255,0.08);border:2px solid #FDE68A;border-radius:14px;padding:1.25rem;text-align:center;text-decoration:none;color:white;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+          <div style="margin-bottom:0.5rem;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FDE68A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/><path d="M3 21h18" stroke-width="1.4"/></svg></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;margin-bottom:0.2rem;">Ghat Sunrise Yoga</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.6);">On the ghats at dawn</div>
+          <div style="font-size:0.62rem;color:rgba(255,255,255,0.4);">(yoga on river banks)</div>
+        </a>
+        <a href="#" onclick="closeAllModals();document.getElementById('modal-demo').classList.add('open');return false;" style="background:rgba(255,255,255,0.08);border:2px solid #C4B5FD;border-radius:14px;padding:1.25rem;text-align:center;text-decoration:none;color:white;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+          <div style="margin-bottom:0.5rem;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;margin-bottom:0.2rem;">Free Online Demo</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.6);">Meet your teacher online</div>
+          <div style="font-size:0.62rem;color:rgba(255,255,255,0.4);">(to enrol into online classes)</div>
+        </a>
+        <a href="#" onclick="closeAllModals();document.getElementById('modal-walkin').classList.add('open');return false;" style="background:rgba(255,255,255,0.08);border:2px solid #5EEAD4;border-radius:14px;padding:1.25rem;text-align:center;text-decoration:none;color:white;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+          <div style="margin-bottom:0.5rem;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;margin-bottom:0.2rem;">Studio Walk-in</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.6);">Omkaram Studio, Assi Ghat</div>
+          <div style="font-size:0.62rem;color:rgba(255,255,255,0.4);">(meet teachers & enrol to studio classes)</div>
+        </a>
+        <a href="https://wa.me/917022321855?text=I%20would%20like%20to%20join%20the%20Heritage%20Yoga%20Walk" target="_blank" style="background:rgba(255,255,255,0.08);border:2px solid #F9A8D4;border-radius:14px;padding:1.25rem;text-align:center;text-decoration:none;color:white;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+          <div style="margin-bottom:0.5rem;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F9A8D4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l-3 5"/><path d="M12 12l3 5"/><path d="M9 12H6"/><path d="M15 12h3"/></svg></div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;margin-bottom:0.2rem;">Yoga Heritage Walk</div>
+          <div style="font-size:0.62rem;color:rgba(255,255,255,0.4);margin-top:0.2rem;">(explore Yogic heritage of the city)</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.6);">Chat with us on WhatsApp</div>
+        </a>
+        <a href="#" onclick="showPage('doctor');return false;" style="grid-column:1/-1;background:rgba(22,163,74,0.1);border:2px solid rgba(22,163,74,0.4);border-radius:14px;padding:0.875rem 1.5rem;text-decoration:none;color:white;transition:background 0.2s;display:flex;align-items:center;gap:1rem;" onmouseover="this.style.background='rgba(22,163,74,0.18)'" onmouseout="this.style.background='rgba(22,163,74,0.1)'">
+          <div style="width:36px;height:36px;background:rgba(22,163,74,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div style="flex:1;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:#86EFAC;margin-bottom:0.1rem;">Disease Treatment through Yoga</div>
+            <div style="font-size:0.7rem;color:var(--text-soft);font-weight:300;">Get a personalised Yogic program from a doctor at AIIMS, India's leading medical institute <span style="font-size:0.65rem;opacity:0.7;">(for yogic medical treatment)</span></div>
+          </div>
+          <span style="font-size:0.62rem;border:1px solid rgba(22,163,74,0.5);color:#86EFAC;border-radius:100px;padding:0.2rem 0.65rem;white-space:nowrap;flex-shrink:0;">Know more</span>
+        </a>
+      </div>
+      <div class="contact-info">
+        📍 Omkaram Studio, Assi Ghat, Varanasi, Uttar Pradesh<br>
+        📞 +91 70223 21855 &nbsp;·&nbsp; omkaramyoga0621@gmail.com
+      </div>
+
+
+    </div>
+  </section>
+
+  <div style="padding:0 4rem;max-width:1100px;margin:0 auto 0;">
+    <div style="border-radius:20px;overflow:hidden;">
+      <img src="images/img9.jpg" alt="Visitors meditating by the Ganga at sunrise" style="width:100%;height:auto;display:block;border-radius:20px;">
+    </div>
+  </div>
+
+
+</div><!-- end home page -->
+
+<!-- ===== WHAT WE TEACH PAGE ===== -->
+<div id="page-styles" class="page">
+  <section id="styles">
+    <div class="styles-wrap">
+      <p class="section-eyebrow">What we teach</p>
+      <h2 class="section-title">Eight traditions,<br>one <em>river</em></h2>
+      <div class="styles-note">Your teacher will guide you to the right style based on a conversation about your goals, body, and experience. You don't need to choose — just come as you are.</div>
+      <div class="styles-grid">
+        <div class="style-card" style="border-top-color:var(--purple);background:var(--purple-pale);">
+          <h4 style="color:var(--purple);">Patanjali Yoga</h4>
+          <p>Learn Patanjali Yoga in the city of Patanjali himself — the eight-limbed path, from posture to Samadhi.</p>
+        </div>
+        <div class="style-card"><h4>Sivananda Yoga</h4><p>Classical sequence rooted in the five points of yoga.</p></div>
+        <div class="style-card"><h4>Hatha Yoga</h4><p>The foundation — posture, breath, steadiness.</p></div>
+        <div class="style-card"><h4>Ashtanga Mysore</h4><p>A dynamic progressive series at your own pace.</p></div>
+        <div class="style-card"><h4>Vinyasa Flow</h4><p>Movement linked to breath, fluid and rhythmic.</p></div>
+        <div class="style-card"><h4>Viniyoga</h4><p>Krishnamacharya tradition — adapted to you.</p></div>
+        <div class="style-card"><h4>Nada Yoga</h4><p>The yoga of sound — vibration as a path inward.</p></div>
+        <div class="style-card"><h4>Yin Yoga</h4><p>Long-held and meditative — stillness and release.</p></div>
+      </div>
+      <div class="therapy-card">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;">
+          <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12h8M12 8v8"/>
+        </svg>
+        <div>
+          <h4>Yoga Therapy</h4>
+          <p>Specialised online therapeutic sessions for healing and wellness — guided by our medical consultant, bridging yogic science with modern medicine.</p>
+        </div>
+      </div>
+    </div>
+    <div style="border-radius:20px;overflow:hidden;margin-top:1.5rem;">
+      <img src="images/img3.jpg" alt="Yoga on the ghats of Varanasi at sunrise" style="width:100%;height:auto;display:block;border-radius:20px;">
+    </div>
+  </section>
+</div><!-- end what we teach page -->
+
+<!-- ===== VARANASI & YOGA PAGE ===== -->
+<div id="page-varanasi" class="page">
+<style>
+.vp{max-width:900px;margin:0 auto;padding:4rem 3rem 5rem;}
+.vp-hero{text-align:center;padding:3.5rem 2rem 2.5rem;margin-bottom:2.5rem;}
+.vp-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.4rem);font-weight:300;color:var(--text-dark);line-height:1.12;margin-bottom:1rem;}
+.vp-hero h1 em{font-style:italic;color:var(--purple-soft);}
+.vp-hero p{font-size:1rem;color:var(--text-mid);font-weight:300;line-height:1.85;max-width:620px;margin:0 auto;}
+/* chapter heading */
+.vp-chapter{display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;}
+.vp-chapter-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.vp-chapter-icon.c-saffron{background:#FEF3C7;}
+.vp-chapter-icon.c-purple{background:#DDD6FE;}
+.vp-chapter-icon.c-teal{background:#99F6E4;}
+.vp-chapter-icon.c-pink{background:#FBCFE8;}
+.vp-chapter-icon.c-green{background:#BBF7D0;}
+.vp-chapter h2{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:400;color:var(--text-dark);margin-bottom:0.1rem;}
+.vp-chapter .sub{font-size:0.72rem;color:var(--text-soft);letter-spacing:0.08em;text-transform:uppercase;font-weight:400;}
+/* intro paragraph */
+.vp-intro{font-size:0.92rem;color:var(--text-mid);font-weight:300;line-height:1.9;margin-bottom:1.5rem;}
+/* pointer cards — clean modern grid */
+.vp-points{display:grid;grid-template-columns:1fr 1fr;gap:0.875rem;margin-bottom:0.5rem;}
+.vp-point{background:var(--white);border-radius:14px;padding:1.1rem 1.25rem;border-left:3px solid var(--purple-mid);}
+.vp-point.s{border-left-color:var(--saffron);}
+.vp-point.t{border-left-color:var(--teal-mid);}
+.vp-point.p{border-left-color:#F9A8D4;}
+.vp-point.g{border-left-color:#86EFAC;}
+.vp-point h4{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--text-dark);margin-bottom:0.25rem;}
+.vp-point p{font-size:0.78rem;color:var(--text-soft);font-weight:300;line-height:1.6;}
+/* quote block */
+.vp-quote{background:var(--purple-pale);border-radius:14px;padding:1.5rem 2rem;margin:1.5rem 0;border-left:3px solid var(--purple-mid);font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--purple);line-height:1.7;}
+/* timeline strip */
+.vp-timeline{display:flex;flex-direction:column;gap:0;}
+.vp-titem{display:flex;gap:1.25rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid rgba(0,0,0,0.05);}
+.vp-titem:last-child{border-bottom:none;}
+.vp-tdate{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--saffron);min-width:100px;padding-top:2px;flex-shrink:0;}
+.vp-titem h5{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem;}
+.vp-titem p{font-size:0.78rem;color:var(--text-soft);font-weight:300;line-height:1.6;}
+/* walk box */
+.vp-walk{background:linear-gradient(135deg,#4C3890,#3B2F6E);border-radius:18px;padding:2rem 2.5rem;color:white;margin-top:2.5rem;display:flex;gap:1.75rem;align-items:flex-start;}
+.vp-walk-icon{width:52px;height:52px;background:rgba(255,255,255,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.vp-walk h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;margin-bottom:0.4rem;}
+.vp-walk p{font-size:0.82rem;color:rgba(255,255,255,0.7);font-weight:300;line-height:1.7;margin-bottom:1rem;}
+.vp-walk a{display:inline-block;background:var(--yellow);color:#78350F;padding:0.55rem 1.5rem;border-radius:100px;font-size:0.82rem;font-weight:600;text-decoration:none;}
+.vp-divider{border:none;border-top:1px solid rgba(0,0,0,0.07);margin:0.5rem 0;}
+@media(max-width:768px){
+  .vp{padding:3rem 1.25rem 4rem;}
+  .vp-points{grid-template-columns:1fr;}
+  .vp-walk{flex-direction:column;padding:1.5rem;}
+}
+</style>
+<div class="vp">
+
+  <div class="vp-hero">
+    <p class="section-eyebrow" style="justify-content:center;display:flex;">Varanasi & Yoga</p>
+    <h1>The city that is yoga<br><em>made manifest</em></h1>
+    <p>Varanasi is not simply a place where yoga is practised — it was architecturally and geometrically conceived as an outer expression of the human energy system. This is where Adiyogi first transmitted yoga. Where Patanjali wrote the Sutras.</p>
+  </div>
+
+  <hr class="vp-divider">
+
+  <!-- 1. ADIYOGI -->
+  <div class="vp-chapter">
+    <div class="vp-chapter-icon c-saffron">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="5" r="2.5"/><path d="M12 8v6"/><path d="M8 10c0 0-2 2-2 5h12c0-3-2-5-2-5"/><path d="M7 19c2 2 8 2 10 0"/></svg>
+    </div>
+    <div>
+      <h2>Adiyogi — the first yogi</h2>
+      <div class="sub">Shiva · origin of yoga · Varanasi as his meditation ground</div>
+    </div>
+  </div>
+  <p class="vp-intro">Ancient texts consistently place Shiva — Adiyogi, the originator of yoga — in Varanasi when not in the Himalayas. Kashi is described as his city: the one place on earth he never truly leaves, held outside ordinary time on the tip of his trident.</p>
+  <div class="vp-points">
+    <div class="vp-point s">
+      <h4>Shiva's meditation seat on the plains</h4>
+      <p>When not in the high peaks, Varanasi was where Adiyogi sat. The cremation ground at Manikarnika Ghat is said to be where he lit his eternal fire and entered stillness.</p>
+    </div>
+    <div class="vp-point s">
+      <h4>The first transmission of yoga</h4>
+      <p>On the banks of the Ganga, Adiyogi first transmitted yogic knowledge to the Saptarishis — the seven sages. That act of transmission is what yoga lineages trace themselves back to.</p>
+    </div>
+    <div class="vp-point s">
+      <h4>Kashi as the city of liberation</h4>
+      <p>Varanasi is described as a place where Moksha — final liberation — is available to all who come sincerely. The city itself functions as a field of grace.</p>
+    </div>
+    <div class="vp-point s">
+      <h4>Kashi Vishwanath — the crown centre</h4>
+      <p>The great Shiva temple at the heart of Varanasi is considered the Sahasrara — the crown chakra of the city's energy map, connecting the human to the cosmic.</p>
+    </div>
+  </div>
+
+  <div style="margin:1.5rem 0 0.5rem;">
+    <img src="images/img10.jpg" alt="The ghats of Varanasi — historic painting" style="width:100%;height:auto;display:block;border-radius:16px;">
+    <p style="font-size:0.72rem;color:var(--text-soft);font-style:italic;text-align:right;margin-top:0.5rem;padding-right:0.5rem;">The ghats of Kashi — where Adiyogi sat in meditation</p>
+  </div>
+
+  <hr class="vp-divider">
+
+  <!-- 2. ENERGY GRID -->
+  <div class="vp-chapter">
+    <div class="vp-chapter-icon c-purple">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="1.6" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    </div>
+    <div>
+      <h2>Varanasi as an energy grid</h2>
+      <div class="sub">A city geometrically designed to mirror the human system</div>
+    </div>
+  </div>
+  <p class="vp-intro">Yogic masters describe Varanasi not simply as a city but as a macrocosmic mechanism — laid out to align the human energy system with cosmic geometry, turning the act of simply living here into a form of practice.</p>
+  <div class="vp-points">
+    <div class="vp-point">
+      <h4>Varuna & Asi — Ida and Pingala</h4>
+      <p>The two rivers bounding Varanasi — Varuna to the north, Asi to the south — represent the left and right energy channels of the human body. The city between them is the Sushumna, the central axis.</p>
+    </div>
+    <div class="vp-point">
+      <h4>468 temples — a geometric matrix</h4>
+      <p>The city was traditionally arranged around 468 shrines encoding 9 planets, 8 directions, and 12 zodiac signs across concentric circles — a vast map of cosmic energy expressed in stone and lane.</p>
+    </div>
+    <div class="vp-point">
+      <h4>The chakra map of the city</h4>
+      <p>Each major temple in Varanasi corresponds to a chakra in the human energy body. Moving through the city is movement through the self — from the base of the spine to the crown.</p>
+    </div>
+    <div class="vp-point">
+      <h4>Kashi — a tower of light</h4>
+      <p>In yogic texts, Varanasi is described as a luminous column rising from the earth — an axis of concentrated spiritual energy anchoring the geography of northern India.</p>
+    </div>
+  </div>
+
+  <div style="margin:1.5rem 0 0.5rem;">
+    <img src="images/img11.jpg" alt="Varanasi ghats at dawn — painting" style="width:100%;height:auto;display:block;border-radius:16px;">
+    <p style="font-size:0.72rem;color:var(--text-soft);font-style:italic;text-align:right;margin-top:0.5rem;padding-right:0.5rem;">The Ganga at dawn — where the energy grid of Kashi meets the river</p>
+  </div>
+
+  <hr class="vp-divider">
+
+  <!-- 3. PATANJALI -->
+  <div class="vp-chapter">
+    <div class="vp-chapter-icon c-teal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.6" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <div>
+      <h2>Patanjali and the Yoga Sutras</h2>
+      <div class="sub">The Yoga Sutras were compiled in Varanasi · 196 aphorisms · the foundation of all classical yoga</div>
+    </div>
+  </div>
+  <p class="vp-intro">Maharishi Patanjali lived and taught in Varanasi. He did not invent yoga — he gathered thousands of scattered yogic traditions and distilled them into 196 precise aphorisms, creating the definitive map of the inner path.</p>
+  <div class="vp-points">
+    <div class="vp-point t">
+      <h4>Nag Kuan — where Patanjali lived in Varanasi</h4>
+      <p>According to local tradition, Patanjali migrated to Kashi and lived near a sacred well called Nag Kuan (Snake Well) in the Jaitpura area of Varanasi. It is widely believed that he performed intense penance here and composed both the Yoga Sutras and his treatise on Sanskrit grammar, the Mahabhashya, at this very site.</p>
+    </div>
+    <div class="vp-point t">
+      <h4>Nag Panchami — honouring Patanjali in Varanasi</h4>
+      <p>Patanjali is revered as an incarnation of Adi Shesha, the divine cosmic serpent. The people of Varanasi celebrate Nag Panchami at Nag Kuan specifically to honour his memory — a living tradition connecting this city to the father of classical yoga.</p>
+    </div>
+    <div class="vp-point t">
+      <h4>Learn here, at the source</h4>
+      <p>To study Patanjali Yoga in Varanasi is to study it where it was written — in the same city, beside the same river, under the same sky.</p>
+    </div>
+    <div class="vp-point t">
+      <h4>The Yoga Sutras — 196 aphorisms that defined a science</h4>
+      <p>Patanjali gathered thousands of scattered yogic traditions and distilled them into 196 precise sutras — covering ethics, posture, breath, withdrawal, concentration, meditation and Samadhi. The most complete map of the inner path ever written, composed here in Kashi.</p>
+    </div>
+  </div>
+
+
+  <div style="margin:1.5rem 0 0.5rem;display:flex;justify-content:center;">
+    <div style="max-width:50%;">
+      <img src="images/img12.jpg" alt="Nag Kuan — the sacred well of Patanjali in Varanasi" style="width:100%;height:auto;display:block;border-radius:16px;">
+      <p style="font-size:0.72rem;color:var(--text-soft);font-style:italic;text-align:right;margin-top:0.5rem;padding-right:0.5rem;">Nag Kuan (Snake Well), Varanasi</p>
+    </div>
+  </div>
+
+  <hr class="vp-divider">
+
+  <!-- 4. KRISHNAMACHARYA -->
+  <div class="vp-chapter">
+    <div class="vp-chapter-icon c-saffron">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+    </div>
+    <div>
+      <h2>Krishnamacharya — father of modern yoga</h2>
+      <div class="sub">Modern yoga's roots passed through Varanasi before reaching Mysore and the world</div>
+    </div>
+  </div>
+  <p class="vp-intro">Tirumalai Krishnamacharya studied in Varanasi (1906–09, 1919–25) — not Mysore. His principal at Varanasi Sanskrit College directed him toward deeper yogic study in Tibet. It was also here that the Maharajah of Mysore first heard of his skill as a yoga therapist and invited him to teach at the palace. From that single invitation, the lineage that produced Pattabhi Jois, B.K.S. Iyengar, Indra Devi and T.K.V. Desikachar was born — and through them, the yoga practised in studios across the world today.</p>
+  <div class="vp-points">
+    <div class="vp-point s">
+      <h4>Varanasi Sanskrit College, 1906–1925</h4>
+      <p>Where Krishnamacharya studied Sanskrit, philosophy and yogic science — and where word of his mastery first began to travel.</p>
+    </div>
+    <div class="vp-point s">
+      <h4>The lineage that changed the world</h4>
+      <p>Iyengar Yoga · Ashtanga Vinyasa · Viniyoga — all trace their roots to a man whose path was shaped here, in Varanasi.</p>
+    </div>
+  </div>
+
+  <hr class="vp-divider">
+
+  <!-- 5. LAHIRI -->
+  <div class="vp-chapter">
+    <div class="vp-chapter-icon c-pink">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9D174D" stroke-width="1.6" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <div>
+      <h2>Lahiri Mahasaya — the householder yogi</h2>
+      <div class="sub">1828–1895 · Reviver of Kriya Yoga · Kashi Baba · Satyalok shrine still active</div>
+    </div>
+  </div>
+  <p class="vp-intro">Shyama Charan Lahiri lived in Varanasi as a government accountant and family man — and yet initiated over 5,000 people into Kriya Yoga, a pranayama-based path he received from Mahavatar Babaji. His radical act: teaching liberation to householders, not just renunciants. His disciple Sri Yukteswar Giri taught Paramahansa Yogananda, whose <em>Autobiography of a Yogi</em> carried Indian yoga to the Western world. That chain began in the lanes of this city. The family shrine at Chousatti Ghat remains active.</p>
+  <div class="vp-points">
+    <div class="vp-point p">
+      <h4>Kriya Yoga — breath as liberation</h4>
+      <p>A precise pranayama technique that Lahiri taught as a direct scientific path — available to anyone living an ordinary life in the world.</p>
+    </div>
+    <div class="vp-point p">
+      <h4>Satyalok shrine, Chousatti Ghat</h4>
+      <p>The Lahiri family home and shrine in Varanasi remains active. The lineage continues unbroken through five generations to the present day.</p>
+    </div>
+  </div>
+
+  <hr class="vp-divider">
+
+  <!-- 6. NATH -->
+  <div class="vp-chapter">
+    <div class="vp-chapter-icon c-green">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="1.6" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div>
+      <h2>The Nath tradition</h2>
+      <div class="sub">Gorakshnath · Hatha Yoga · Aghor · Kabir · all rooted in Varanasi</div>
+    </div>
+  </div>
+  <p class="vp-intro">The Nath sampradaya — the lineage that gave Hatha Yoga its physical form — traces from Shiva through Matsyendranath to Gorakshnath, who systematised asana, bandha, mudra and pranayama. His temple stands in Varanasi. The Aghor tradition practises at Manikarnika Ghat. Saint Kabir — poet, weaver, mystic — dissolved the boundaries between yoga, devotion, and mysticism from these same streets.</p>
+  <div class="vp-points">
+    <div class="vp-point g">
+      <h4>Gorakshnath's temple</h4>
+      <p>A living site in Varanasi connected to the systematiser of Hatha Yoga — still visited by practitioners and pilgrims today.</p>
+    </div>
+    <div class="vp-point g">
+      <h4>Manikarnika Ghat — the eternal fire</h4>
+      <p>Where the Aghor tradition has practised for centuries. Yoga as confrontation with impermanence — at its most unvarnished.</p>
+    </div>
+    <div class="vp-point g">
+      <h4>Kabir Math</h4>
+      <p>The ashram of Saint Kabir preserves his legacy at the crossroads of Bhakti, Sufi and Nath traditions — still an active place of gathering.</p>
+    </div>
+    <div class="vp-point g">
+      <h4>Guru-to-disciple transmission</h4>
+      <p>All Nath and Aghor lineages pass knowledge teacher to student in an unbroken chain — a living practice, not a historical record.</p>
+    </div>
+  </div>
+
+  <div style="margin:1.5rem 0 0.5rem;">
+    <img src="images/img13.jpg" alt="Varanasi panorama — painting" style="width:100%;height:auto;display:block;border-radius:16px;">
+    <p style="font-size:0.72rem;color:var(--text-soft);font-style:italic;text-align:right;margin-top:0.5rem;padding-right:0.5rem;">Kashi — the city that has held its breath for ten thousand years</p>
+  </div>
+
+  <!-- WALK CTA -->
+  <div class="vp-walk">
+    <div class="vp-walk-icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l-3 5"/><path d="M12 12l3 5"/><path d="M9 12H6"/><path d="M15 12h3"/></svg>
+    </div>
+    <div>
+      <h3>Heritage Yoga Walk — Varanasi's living tradition</h3>
+      <p>Walk the yoga history of Varanasi with our guides — visiting the Patanjali Akhada, Gorakshnath's temple, Kabir Math, Lahiri Mahasaya's shrine at Chousatti Ghat, and the ghats where all these traditions converge. This is not a museum tour. This is yoga, still breathing.</p>
+      <a href="https://wa.me/917022321855?text=I%20would%20like%20to%20book%20the%20Heritage%20Yoga%20Walk" target="_blank">Book the walk →</a>
+    </div>
+  </div>
+
+</div>
+</div><!-- end varanasi page -->
+
+<div id="page-photos" class="page">
+  <div style="padding-top:80px;">
+    <section style="padding:4.5rem 4rem;max-width:1100px;margin:0 auto;">
+      <p class="section-eyebrow">On the Ghats</p>
+      <h2 class="section-title">Life at the <em>river's edge</em></h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;align-items:start;">
+        <div style="border-radius:20px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.13);">
+          <img src="images/img14.jpg" alt="Sunrise yoga silhouettes on the Ganges ghats, Varanasi" style="width:100%;height:auto;display:block;">
+        </div>
+        <div style="border-radius:20px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.13);">
+          <img src="images/img15.jpg" alt="Students practising yoga on the Assi Ghat, Varanasi" style="width:100%;height:auto;display:block;">
+        </div>
+        <div style="border-radius:20px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.13);">
+          <img src="images/img16.png" alt="Indoor yoga class at Omkaram studio" style="width:100%;height:auto;display:block;">
+        </div>
+        <div style="border-radius:20px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.13);">
+          <img src="images/img17.png" alt="Outdoor yoga practice under a banyan tree" style="width:100%;height:auto;display:block;">
+        </div>
+      </div>
+    </section>
+  </div>
+</div><!-- end photos page -->
+
+
+
+
+<!-- ===== DOCTOR CONSULTATION PAGE ===== -->
+<div id="page-doctor" class="page">
+<style>
+.dp{max-width:780px;margin:0 auto;padding:5rem 2.5rem 5rem;}
+.dp-hero{text-align:center;padding:3rem 1.5rem 2.5rem;margin-bottom:2rem;}
+.dp-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;color:#1a1a1a;line-height:1.15;margin-bottom:0.6rem;}
+.dp-hero h1 em{font-style:italic;color:#16A34A;}
+.dp-hero .dp-role{font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:#16A34A;font-weight:500;margin-bottom:1.5rem;}
+.dp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:640px;margin:0 auto 2.5rem;background:#FFF5F5;border-radius:18px;padding:1.5rem 1.25rem;}
+.dp-step{text-align:center;}
+.dp-step-num{width:32px;height:32px;background:#16A34A;color:white;border-radius:50%;font-size:0.8rem;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto 0.6rem;}
+.dp-step h4{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:600;color:#1a1a1a;margin-bottom:0.25rem;}
+.dp-step p{font-size:0.7rem;color:#6B7280;font-weight:300;line-height:1.5;}
+.dp-step-divider{display:flex;align-items:center;justify-content:center;color:#86EFAC;font-size:1.2rem;padding-top:1rem;}
+.dp-wa-btn{display:inline-flex;align-items:center;gap:0.6rem;background:#16A34A;color:white;text-decoration:none;font-size:0.88rem;font-weight:500;padding:0.75rem 1.75rem;border-radius:100px;margin:0 auto 2.5rem;transition:opacity 0.2s;letter-spacing:0.01em;}
+.dp-wa-btn:hover{opacity:0.88;}
+.dp-card{background:white;border-radius:18px;padding:2rem 2.25rem;border:1px solid #DCFCE7;margin-bottom:1.5rem;box-shadow:0 4px 24px rgba(22,163,74,0.05);}
+.dp-name{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:400;color:#1a1a1a;margin-bottom:0.25rem;}
+.dp-subtitle{font-size:0.8rem;font-weight:400;color:#16A34A;letter-spacing:0.04em;margin-bottom:1.25rem;}
+.dp-bio{font-size:0.88rem;color:#4B5563;line-height:1.85;font-weight:300;}
+.dp-bio strong{color:#1a1a1a;font-weight:500;}
+.dp-bio ul{margin:0.75rem 0 0.75rem 1.25rem;padding:0;}
+.dp-bio ul li{margin-bottom:0.3rem;}
+.dp-expertise{background:#FFF5F5;border-radius:14px;padding:1.5rem 1.75rem;margin-top:1.5rem;}
+.dp-expertise h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:#1a1a1a;margin-bottom:1rem;letter-spacing:0.01em;}
+.dp-tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.dp-tag{font-size:0.72rem;color:#14532D;background:#DCFCE7;border-radius:100px;padding:0.3rem 0.85rem;font-weight:400;}
+.dp-quote{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:#166534;line-height:1.75;text-align:center;padding:1.5rem 2rem;background:#F0FDF4;border-radius:14px;border-left:3px solid #86EFAC;margin-top:1.5rem;}
+@media(max-width:600px){
+  .dp{padding:4.5rem 1.25rem 4rem;}
+  .dp-steps{grid-template-columns:1fr;gap:0.5rem;}
+  .dp-step-divider{display:none;}
+  .dp-card{padding:1.5rem 1.25rem;}
+}
+</style>
+
+<div class="dp">
+  <div class="dp-hero">
+    <p class="dp-role" style="color:#16A34A;">Disease Treatment · Yoga and Naturopathy Doctor Consultation</p>
+    <h1>Personalised Yogic healthcare<br>from a <em>qualified doctor</em></h1>
+    <p style="font-size:0.9rem;color:#6B7280;font-weight:300;line-height:1.8;max-width:520px;margin:0.75rem auto 2rem;">Clinical yoga therapy designed for your specific health condition — developed and tracked by a doctor trained in both Naturopathy and Yoga, practising at AIIMS Raipur.</p>
+
+    <div class="dp-steps">
+      <div class="dp-step">
+        <div class="dp-step-num">1</div>
+        <h4>WhatsApp the Doctor</h4>
+        <p>Tap the button below to send a message directly to Dr. Anirudh and introduce your concern</p>
+      </div>
+      <div class="dp-step-divider">→</div>
+      <div class="dp-step">
+        <div class="dp-step-num">2</div>
+        <h4>Set Up an Appointment</h4>
+        <p>Schedule a consultation at a time that works for you — online or in person</p>
+      </div>
+      <div class="dp-step-divider">→</div>
+      <div class="dp-step">
+        <div class="dp-step-num">3</div>
+        <h4>Your Program Begins</h4>
+        <p>Receive a personalised Yogic program designed and tracked by the doctor</p>
+      </div>
+    </div>
+
+    <a href="https://wa.me/917981033589?text=Hey%20Omkaram%20Yoga%2C%20I%20needed%20a%20medical%20consultation" target="_blank" class="dp-wa-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Dr. Anirudh
+    </a>
+  </div>
+
+  <div class="dp-card">
+    <div class="dp-name">Dr. Sai Anirudh</div>
+    <div class="dp-subtitle">BNYS, M.Sc. Yoga &nbsp;·&nbsp; Yoga &amp; Naturopathy Consultant &nbsp;·&nbsp; Research Officer, AIIMS Raipur</div>
+
+    <div class="dp-bio">
+      <p>Anirudh is a Yoga &amp; Naturopathy Consultant with a Bachelor of Naturopathy and Yogic Sciences (BNYS) and a Master's degree in Yoga, backed by over four years of clinical experience in holistic healthcare. He currently serves as a <strong>Research Officer at AIIMS Raipur</strong>, contributing to clinical research in integrative health and evidence-informed medicine.</p>
+      <p style="margin-top:1rem;">His clinical practice focuses on lifestyle-related and chronic health conditions, including diabetes, hypertension, obesity, PCOS, arthritis, digestive disorders, stress-related conditions, and selected mental health concerns. He develops individualised care plans combining yoga therapy, naturopathy, lifestyle modification, nutrition guidance, relaxation techniques, and stress management.</p>
+      <p style="margin-top:1rem;">Alongside his clinical work, Anirudh has contributed to scientific research in integrative medicine. He has authored <strong>two research publications</strong>, including work on:</p>
+      <ul>
+        <li>The role of yoga in the management of <strong>functional dyspepsia</strong></li>
+        <li><strong>Stress management</strong> through yoga and aromatherapy</li>
+      </ul>
+      <p>His approach integrates clinical experience with research, aiming to provide personalised, evidence-informed care that complements conventional medical treatment where appropriate.</p>
+    </div>
+
+    <div class="dp-expertise">
+      <h3>Areas of Expertise</h3>
+      <div class="dp-tags">
+        <span class="dp-tag">Yoga Therapy</span>
+        <span class="dp-tag">Naturopathy</span>
+        <span class="dp-tag">Lifestyle Diseases</span>
+        <span class="dp-tag">Diabetes &amp; Hypertension</span>
+        <span class="dp-tag">PCOS &amp; Women's Health</span>
+        <span class="dp-tag">Weight Management</span>
+        <span class="dp-tag">Arthritis &amp; Musculoskeletal Health</span>
+        <span class="dp-tag">Digestive Health</span>
+        <span class="dp-tag">Stress &amp; Mental Wellness</span>
+        <span class="dp-tag">Preventive Care</span>
+      </div>
+    </div>
+
+    <div class="dp-quote">
+      "Combining the science of yoga with naturopathy to support healthier lifestyles through personalised, evidence-informed care."
+    </div>
+  </div>
+
+  <div style="text-align:center;padding-top:0.5rem;">
+    <a href="https://wa.me/917981033589?text=Hey%20Omkaram%20Yoga%2C%20I%20needed%20a%20medical%20consultation" target="_blank" class="dp-wa-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Dr. Anirudh
+    </a>
+
+  </div>
+
+</div>
+</div>
+<!-- ===== END DOCTOR PAGE ===== -->
+
+
+<footer>
+  <div class="footer-om">ॐ</div>
+  <p>© 2025 Omkaram Yoga · Assi Ghat, Varanasi · All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/917022321855" class="float-wa" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+function submitBooking(type){
+  const ids={sunrise:{n:'s-name',e:'s-email',p:'s-phone',d:'s-date',note:'s-note',ok:'s-success'},demo:{n:'d-name',e:'d-email',p:'d-phone',d:'d-date',note:'d-note',ok:'d-success'}};
+  const i=ids[type];
+  const name=document.getElementById(i.n).value.trim();
+  const email=document.getElementById(i.e).value.trim();
+  const phone=document.getElementById(i.p).value.trim();
+  const date=document.getElementById(i.d).value;
+  const note=document.getElementById(i.note).value.trim();
+  if(!name){alert('Please enter your name.');return;}
+  if(!email&&!phone){alert('Please enter at least your email or phone number.');return;}
+  const label=type==='sunrise'?'Sunrise Yoga':'Free Demo Class';
+  const msg=`New booking request — ${label}\n\nName: ${name}\nEmail: ${email||'—'}\nPhone: ${phone||'—'}\nPreferred date: ${date||'Flexible'}\nNote: ${note||'—'}`;
+  window.open(`https://wa.me/917022321855?text=${encodeURIComponent(msg)}`,'_blank');
+  document.getElementById(i.ok).style.display='block';
+}
+function closeAllModals(){
+  document.querySelectorAll('.bmodal-overlay').forEach(m=>m.classList.remove('open'));
+  document.getElementById('locationModal') && document.getElementById('locationModal').classList.remove('open');
+}
+// Close modals on overlay click
+document.addEventListener('click',function(e){
+  if(e.target.classList.contains('bmodal-overlay'))closeAllModals();
+});
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+function showPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  document.getElementById('nav-'+name)&&document.getElementById('nav-'+name).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function scrollToSection(id){
+  showPage('home');
+  setTimeout(()=>{
+    const el=document.getElementById(id);
+    if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+  },100);
+}
+function openModal(){document.getElementById('locationModal').classList.add('open');}
+function closeModal(){document.getElementById('locationModal').classList.remove('open');}
+document.getElementById('locationModal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+</script>
+</body>
+</html>
